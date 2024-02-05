@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% for i in o %}
+<table border="1" style="text-align: center;">
+    <tr>
+    <td> Name of the customer : {{u}}</td>
+    <td> Product name : {{i.product}}</td>
+    <td> Product price : {{i.product.price}}</td>
+    <td> Delivery Address : {{i.address}}</td>
+    <td> Phone : {{i.phone}}</td>
+    <td> No. of Items : {{i.no_of_items}}</td>
+    <td> Ordered on : {{i.ordered_date}}</td>
+    <td> Delivery status : {{i.delivery_status}}</td>
+    <td> <img src="{{i.product.image.url}}"height ="200px" width="200px"</td>
+    </tr>
+</table>
+
+{% endfor %}
+
+
+
+{% endblock %}

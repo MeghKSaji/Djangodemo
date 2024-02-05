@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" style="margin-bottom:100px;">
+<center>
+<h3 class="mt-4">Register</h3></center>
+
+<form method ="POST"  >
+{% csrf_token %}
+
+
+
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="e" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">User Name</label>
+    <input type="text" class="form-control" name="u" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name="p" id="exampleInputPassword1">
+  </div>
+
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" name="cp" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"> First Name</label>
+    <input type="text" class="form-control" name="f"  id="exampleInputName" aria-describedby="nameHelp">
+
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Last Name</label>
+    <input type="text" class="form-control" name="l"  id="exampleInputName" aria-describedby="nameHelp">
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
+{% endblock %}
